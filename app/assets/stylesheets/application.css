@@ -75,3 +75,12 @@ footer {
     width: 50%; /* 6 columns */
   }
 }
+
+table, th, td {
+    table-layout: fixed;
+    width: 100%;
+   border: 1px solid black;
+   font-size: 20px;
+   margin-bottom: 20px;
+   
+}

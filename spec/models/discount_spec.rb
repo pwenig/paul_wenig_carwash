@@ -7,11 +7,13 @@ RSpec.describe Discount, type: :model do
     discount = Discount.create(
       name: "2nd Visit Discount",
       threshold: 2,
-      equator: 'equal')
+      equator: 'equal',
+      amount: 0.50)
 
     expect( discount.name).to eq("2nd Visit Discount")
     expect( discount.threshold).to eq(2)
-    expect( discount.equator).to eq( "equal" )
+    expect( discount.equator).to eq("equal")
+    expect( discount.amount).to eq(0.50)
     
   end
 
