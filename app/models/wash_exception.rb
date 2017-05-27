@@ -1,0 +1,2 @@
+class WashException < ApplicationRecord
+end

@@ -1,0 +1,61 @@
+
+<div class="container">
+
+    <div class="row row-offcanvas row-offcanvas-right">
+
+        <div class="col-xs-12 col-sm-9">
+            <div class="jumbotron">
+                <span style="margin-left: 200px"><%= image_tag("logo.png", :alt => "logo", size: "200x200")%></span>
+            </div>
+            <div class="row">
+                <div class="col-xs-6 col-lg-3">
+                    <h2>Packages</h2>
+                    <p>Create and Edit Packages</p>
+                    <div class="btn btn-default" role="button"><%= link_to "View packages »", packages_path%></div>
+                </div>
+                <div class="col-xs-6 col-lg-3">
+                    <h2>Add-Ons</h2>
+                    <p>Create and Edit Add-Ons</p>
+                    <div class="btn btn-default" role="button"><%= link_to "View add-ons »", addons_path%></div>
+                </div>
+                <div class="col-xs-6 col-lg-3">
+                    <h2>Discounts</h2>
+                    <p>Create and Edit Discounts</p>
+                    <div class="btn btn-default" role="button"><%= link_to "View discounts »", discounts_path%></div>
+                </div>
+                <div class="col-xs-6 col-lg-3">
+                    <h2>Exceptions</h2>
+                    <p>Create and Edit Exceptions</p>
+                    <div class="btn btn-default" role="button"><%= link_to "View exceptions »", exceptions_path%></div>
+
+                </div>
+                <div class="col-xs-6 col-lg-3">
+                    <h2>Stolen Cars</h2>
+                      <p>Create and Edit Stolen Cars</p>
+                      <div class="btn btn-default" role="button"><%= link_to "View stolen cars »", stolen_cars_path%></div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar">
+            <div class="list-group">
+                <div class="list-group-item active" style="height: 100px;"><%= link_to "Sales", sales_path, {:style=>'color: white; font-size: 28px;', :class => "css_class"}%></div>
+            </div>
+
+            <div class="list-group">
+                <div class="list-group-item active" style="height: 100px;"><%= link_to "Sales Reports", reports_path, {:style=>'color: white; font-size: 28px;', :class => "css_class"}%></div>
+            </div>
+
+
+        </div>
+    </div>
+
+    <hr>
+
+    <footer>
+        <p>© Paul Wenig</p>
+    </footer>
+
+  </div>
+</div>
