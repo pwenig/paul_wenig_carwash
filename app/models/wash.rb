@@ -19,9 +19,9 @@ class Wash < ApplicationRecord
 
   def self.discount(number_of_washes)
     Discount.all.each do |discount|
-      if discount.equator == 'equal' && discount.threshold == number_of_washes + 1
+      if discount.equator == 'Equal' && discount.threshold == number_of_washes + 1
         return discount.amount
-      elsif discount.equator == 'greater' && (number_of_washes +1) > discount.threshold
+      elsif discount.equator == 'Greater' && (number_of_washes +1) > discount.threshold
         return discount.amount
       else
         return 0
