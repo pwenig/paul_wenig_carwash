@@ -6,9 +6,9 @@
       <%= simple_form_for @customer,
       :url => url_for(:action => 'create', :controller => 'washes'),
       :method => 'post' do |f| %>
-        <%= f.input :first_name%>
-        <%= f.input :last_name%>
-        <%= f.input :license%>
+        <%= f.input :first_name, required: true%>
+        <%= f.input :last_name, required: true%>
+        <%= f.input :license, required: true%>
         <%= f.simple_fields_for :washes do |w| %>
           <%= w.input :package_id, :collection => @packages, :label_method => :name, :value_method => :id %>
           <%= w.input :addon_id, required: false, :collection => @addons, :label_method => :name, :value_method => :id %>
