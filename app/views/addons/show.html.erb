@@ -4,9 +4,9 @@
       <h2>Edit Addon</h2>
       
       <%= simple_form_for @addon do |f| %>
-        <%= f.input :name %>
+        <%= f.input :name, required: true %>
         <%= f.input :description %>
-        <%= f.input :price %>
+        <%= f.input :price, required: true %>
         <%= f.button :submit %>
       <% end %>
 

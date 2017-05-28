@@ -4,7 +4,7 @@
       <h2>Edit Stolen Car</h2>
       
       <%= simple_form_for @stolen_car do |f| %>
-        <%= f.input :license%>
+        <%= f.input :license, required: true %>
         <%= f.button :submit %>
       <% end %>
 

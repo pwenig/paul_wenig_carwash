@@ -4,10 +4,10 @@
       <h2>Edit Discount</h2>
       
       <%= simple_form_for @discount do |f| %>
-        <%= f.input :name %>
-        <%= f.input :threshold, placeholder: 'i.e. # of visits' %>
-        <%= f.input :equator, collection: ['equal', 'greater'] %>
-        <%= f.input :amount %>
+        <%= f.input :name, required: true %>
+        <%= f.input :threshold, placeholder: 'i.e. # of visits', required: true %>
+        <%= f.input :equator, collection: ['equal', 'greater'], required: true %>
+        <%= f.input :amount, required: true %>
         <%= f.button :submit %>
       <% end %>
 

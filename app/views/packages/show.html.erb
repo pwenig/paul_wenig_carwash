@@ -4,9 +4,9 @@
       <h2>Edit Package</h2>
       
       <%= simple_form_for @package do |f| %>
-        <%= f.input :name %>
-        <%= f.input :description %>
-        <%= f.input :price %>
+        <%= f.input :name, required: true %>
+        <%= f.input :description, required: true %>
+        <%= f.input :price, required: true %>
         <%= f.button :submit %>
       <% end %>
 
