@@ -7,15 +7,20 @@ class Wash < ApplicationRecord
 
 
   def self.is_stolen(license)
+    stolen_cars = []
     StolenCar.all.each do |stolen|
       if stolen.license == license
-        return true
-      else
-        return false
+        stolen_cars << stolen
       end
     end
+    if stolen_cars.length > 0
+      return true
+    else
+      return false
+    end
+      
+    end
 
-  end
 
   def self.discount(number_of_washes)
     Discount.all.each do |discount|
