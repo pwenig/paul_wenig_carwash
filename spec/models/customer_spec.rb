@@ -35,7 +35,7 @@ RSpec.describe Customer, type: :model do
     customer = Customer.find(customer.id)
     customer.update_attribute(:wash_id, wash.id)
 
-    expect(customer.washes.first.amount).to eq(5.00)
+    expect(customer.washes.first.amount).to eq("5.0")
     expect(customer.washes.first.package.name).to eq("Standard Car")
 
 

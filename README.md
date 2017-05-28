@@ -1,24 +1,23 @@
-# README
+The A1A Car Wash is open for business! This app will allow you to add and manage wash packages,
+wash addons, discounts, exceptions, and stolen cars. It allows you to process sales and view
+sales reports.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Staging:
 
-Things you may want to cover:
 
-* Ruby version
 
-* System dependencies
+Installation
+-----------------
+* Git Clone
+* cd into directory
+* rake db:create
+* rake db:migrate
+* rake db:seed
 
-* Configuration
+-----------------
 
-* Database creation
+Tests
+-----------------
+* bundle exec rspec
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+-----------------

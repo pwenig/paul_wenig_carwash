@@ -1,0 +1,24 @@
+<div class="container">
+  <div class="col-xs-12 col-sm-9">
+
+    <div class="jumbotron">
+    <h2>New Wash</h2>
+      <%= simple_form_for @customer,
+      :url => url_for(:action => 'create', :controller => 'washes'),
+      :method => 'post' do |f| %>
+        <%= f.input :first_name%>
+        <%= f.input :last_name%>
+        <%= f.input :license%>
+        <%= f.simple_fields_for :washes do |w| %>
+          <%= w.input :package_id, :collection => @packages, :label_method => :name, :value_method => :id %>
+          <%= w.input :addon_id, required: false, :collection => @addons, :label_method => :name, :value_method => :id %>
+          <%= w.input :wash_exception_id, required: false, :collection => @wash_exceptions, :label_method => :name, :value_method => :id %>
+          <% end %>
+        <%= f.button :submit, "Complete Sale" %>
+      <% end %>
+
+    </div>
+
+</div>
+
+

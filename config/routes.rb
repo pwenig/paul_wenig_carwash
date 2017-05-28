@@ -6,8 +6,9 @@ Rails.application.routes.draw do
   resources :reports
   resources :addons
   resources :customers
-  resources :sales
   resources :wash_exceptions
   resources :stolen_cars
   resources :discounts
+  resources :washes
+  post '/washes/lookup' => 'washes#lookup'
 end

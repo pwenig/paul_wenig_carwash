@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170527211151) do
+ActiveRecord::Schema.define(version: 20170528135608) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -64,16 +64,20 @@ ActiveRecord::Schema.define(version: 20170527211151) do
   end
 
   create_table "washes", force: :cascade do |t|
-    t.integer "amount"
+    t.string "amount"
     t.bigint "package_id"
     t.bigint "addon_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "customer_id"
+    t.string "license"
+    t.bigint "wash_exception_id"
     t.index ["addon_id"], name: "index_washes_on_addon_id"
     t.index ["customer_id"], name: "index_washes_on_customer_id"
     t.index ["package_id"], name: "index_washes_on_package_id"
+    t.index ["wash_exception_id"], name: "index_washes_on_wash_exception_id"
   end
 
   add_foreign_key "washes", "customers"
+  add_foreign_key "washes", "wash_exceptions"
 end

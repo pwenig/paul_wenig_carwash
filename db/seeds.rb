@@ -1,13 +1,43 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
-Package.create(name: 'Standard Car Wash', description: 'Basic Car Wash', price: 5)
-Package.create(name: 'Standard Truck Wash', description: 'Basic Truck Wash', price: 10)
-Addon.create(name: 'Muddy Bed', description: 'Muddy Truck Bed', price: 2)
+package1 = Package.create(name: 'Standard Car Wash', description: 'Basic Car Wash', price: 5)
+package2 = Package.create(name: 'Standard Truck Wash', description: 'Basic Truck Wash', price: 10)
+addon = Addon.create(name: 'Muddy Bed', description: 'Muddy Truck Bed', price: 2)
 WashException.create(name: 'Bed Down', description: 'Bed let down')
 Discount.create(name: '2nd Time Visit', threshold: 2, equator: 'Equal', amount: 0.50)
 StolenCar.create(license: '1111111')
+customer1 = Customer.create(first_name: "Saul", last_name: "Goodman", license: "LWYRUP")
+customer2 = Customer.create(first_name: "Skyler", last_name: "White", license: "380NSP")
+customer3 = Customer.create(first_name: "Jesse", last_name: "Pinkman", license: "THE CAPN")
+customer4 = Customer.create(first_name: "Hank", last_name: "Shrader", license: "GLX962")
+customer5 = Customer.create(first_name: "Mike", last_name: "Ehrmantraut", license: "VR57G1")
+customer6 = Customer.create(first_name: "Gus", last_name: "Fring", license: "KD12A6")
+customer7 = Customer.create(first_name: "Ted", last_name: "Beneke", license: "EA4401")
+customer8 = Customer.create(first_name: "Walter", last_name: "White", license: "3272153")
+customer9 = Customer.create(first_name: "Tuco", last_name: "Salamanco", license: "506NM")
+customer10 = Customer.create(first_name: "Gretchen", last_name: "Schwartz", license: "GRAY-MTR")
+wash1 = Wash.create(amount: "$5.00", package_id: package1.id, customer_id: customer1.id)
+wash2 = Wash.create(amount: "$5.00", package_id: package1.id, customer_id: customer2.id)
+wash3 = Wash.create(amount: "$10.00", package_id: package2.id, customer_id: customer3.id)
+wash4 = Wash.create(amount: "$10.00", package_id: package2.id, customer_id: customer4.id)
+wash5 = Wash.create(amount: "$10.00", package_id: package2.id, customer_id: customer5.id)
+wash6 = Wash.create(amount: "$5.00", package_id: package1.id, customer_id: customer6.id)
+wash7 = Wash.create(amount: "$5.00", package_id: package1.id, customer_id: customer7.id)
+wash8 = Wash.create(amount: "$5.00", package_id: package1.id, customer_id: customer8.id)
+wash9 = Wash.create(amount: "$5.00", package_id: package1.id, customer_id: customer9.id)
+wash10 = Wash.create(amount: "$5.00", package_id: package1.id, customer_id: customer10.id)
+customer1.update_attribute(:wash_id, wash1.id)
+customer2.update_attribute(:wash_id, wash2.id)
+customer3.update_attribute(:wash_id, wash3.id)
+customer4.update_attribute(:wash_id, wash4.id)
+customer5.update_attribute(:wash_id, wash5.id)
+customer6.update_attribute(:wash_id, wash6.id)
+customer7.update_attribute(:wash_id, wash7.id)
+customer8.update_attribute(:wash_id, wash8.id)
+customer9.update_attribute(:wash_id, wash9.id)
+customer10.update_attribute(:wash_id, wash10.id)
+
+
+
+
+
+
+
