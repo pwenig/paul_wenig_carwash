@@ -3,6 +3,7 @@ wash addons, discounts, exceptions, and stolen cars. It allows you to process sa
 sales reports.
 
 Staging:
+https://wenig-carwash.herokuapp.com/
 
 
 
