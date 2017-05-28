@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   resources :addons
   resources :customers
   resources :sales
-  resources :exceptions
+  resources :wash_exceptions
   resources :stolen_cars
   resources :discounts
 end

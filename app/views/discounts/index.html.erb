@@ -9,16 +9,20 @@
           <th>Equator</th>
           <th>Amount</th>
           <th></th>
+          <th></th>
         </tr>
-        <tr>
-          <td>2nd Visit Discount</td>
-          <td>2</td>
-          <td>equal</td>
-          <td>0.50</td>
-          <td>Edit</td>
+        <% @discounts.each do |discount|%>
+          <tr>
+          <td><%= discount.name %></td>
+          <td><%= discount.threshold %></td>
+          <td><%= discount.equator %></td>
+          <td><%= discount.amount %></td>
+          <td><%= link_to 'Edit', discount_path(discount) %></td>
+          <td><%=link_to "Delete", discount, method: :delete, class: "delete_button"%>
         </tr>
+        <% end %>
       </table>
-      <button type="button" class="btn btn-primary">Add Package</button>
+        <button type="button" class="btn btn-primary"><%= link_to 'Add Discount', new_discount_path, {:style=>'color:white;', :class => "css_class"}%></button>
     </div>
   </div>
 </div>

@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="col-xs-12 col-sm-9">
+    <div class="jumbotron">
+      <h2>Exceptions</h2>
+      <table>
+        <tr>
+          <th>Name</th>
+          <th>Description</th> 
+          <th></th>
+          <th></th>
+        </tr>
+        <% @exceptions.each do |exception|%>
+          <tr>
+          <td><%= exception.name %></td>
+          <td><%= exception.description %></td>
+          <td><%= link_to 'Edit', wash_exception_path(exception) %></td>
+          <td><%=link_to "Delete", wash_exception_path(exception), method: :delete, class: "delete_button"%>
+        </tr>
+        <% end %>
+      </table>
+        <button type="button" class="btn btn-primary"><%= link_to 'Add Exception', new_wash_exception_path, {:style=>'color:white;', :class => "css_class"}%></button>
+    </div>
+  </div>
+</div>
+
+

@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="col-xs-12 col-sm-9">
+    <div class="jumbotron">
+      <h2>Add New Stolen Car</h2>
+      
+      <%= simple_form_for @stolen_car do |f| %>
+        <%= f.input :license%>
+        <%= f.button :submit %>
+      <% end %>
+
+    </div>
+  </div>
+</div>
+
+

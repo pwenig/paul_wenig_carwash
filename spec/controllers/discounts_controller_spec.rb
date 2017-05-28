@@ -9,5 +9,11 @@ RSpec.describe DiscountsController, type: :controller do
     end
   end
 
+   describe "POST" do
+    it "returns http success" do
+       post :create, params: {discount: {name: "Very Dirty", threshold: 2, equator: 'equals', amount: 0.50}}
+      expect(response).to redirect_to(discounts_path)
+    end
+  end
 
 end

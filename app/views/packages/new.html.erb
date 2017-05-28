@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="col-xs-12 col-sm-9">
+    <div class="jumbotron">
+      <h2>Create New Package</h2>
+      
+      <%= simple_form_for @package do |f| %>
+        <%= f.input :name %>
+        <%= f.input :description %>
+        <%= f.input :price %>
+        <%= f.button :submit %>
+      <% end %>
+
+    </div>
+  </div>
+</div>
+
+

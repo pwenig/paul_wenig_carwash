@@ -9,5 +9,11 @@ RSpec.describe StolenCarsController, type: :controller do
     end
   end
 
+describe "POST" do
+      it "returns http success" do
+        post :create, params: {stolen_car: {license: "1111111"}}
+        expect(response).to redirect_to(stolen_cars_path)
+      end
+    end
 
 end

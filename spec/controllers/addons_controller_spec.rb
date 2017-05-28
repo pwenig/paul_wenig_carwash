@@ -9,5 +9,13 @@ RSpec.describe AddonsController, type: :controller do
     end
   end
 
+  describe "POST" do
+    it "returns http success" do
+       post :create, params: {addon: {name: "Very Dirty", description: "Very Dirty", price: 2.00}}
+      expect(response).to redirect_to(addons_path)
+    end
+  end
+
+
 
 end

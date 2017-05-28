@@ -1,18 +1,24 @@
 <div class="container">
   <div class="col-xs-12 col-sm-9">
     <div class="jumbotron">
-      <h2>Stolen Cards</h2>
+      <h2>Stolen Cars</h2>
       <table>
         <tr>
           <th>License No.</th>
           <th></th>
+          <th></th>
+          
         </tr>
-        <tr>
-          <td>1111111</td>
-          <td>Edit</td>
+          </tr>
+        <% @stolen_cars.each do |stolen_car|%>
+          <tr>
+          <td><%= stolen_car.license %></td>
+          <td><%= link_to 'Edit', stolen_car_path(stolen_car) %></td>
+          <td><%=link_to "Delete", stolen_car, method: :delete, class: "delete_button"%>
         </tr>
+        <% end %>
       </table>
-      <button type="button" class="btn btn-primary">Add Package</button>
+      <button type="button" class="btn btn-primary"><%= link_to 'Add Stolen Car', new_stolen_car_path, {:style=>'color:white;', :class => "css_class"}%></button>
     </div>
   </div>
 </div>
